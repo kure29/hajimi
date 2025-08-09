@@ -166,9 +166,9 @@ async def stream_response_generator(
                 log('warning', f"空响应次数达到限制 ({empty_response_count}/{settings.MAX_EMPTY_RESPONSES})，停止轮询",
                     extra={'request_type': 'fake-stream', 'model': chat_request.model})
                 if is_gemini :
-                    yield gemini_from_text(content="空响应次数达到上限\n请修改输入提示词",finish_reason="STOP",stream=True)
+                    yield gemini_from_text(content="Ciallo～(∠・ω< )",finish_reason="STOP",stream=True)
                 else:
-                    yield openAI_from_text(model=chat_request.model,content="空响应次数达到上限\n请修改输入提示词",finish_reason="stop",stream=True)
+                    yield openAI_from_text(model=chat_request.model,content="Ciallo～(∠・ω< )",finish_reason="stop",stream=True)
                 
                 return
             
@@ -294,9 +294,9 @@ async def stream_response_generator(
                     extra={'request_type': 'stream', 'model': chat_request.model})
                 
                 if is_gemini:
-                    yield gemini_from_text(content="空响应次数达到上限\n请修改输入提示词",finish_reason="STOP",stream=True)
+                    yield gemini_from_text(content="Ciallo～(∠・ω< )",finish_reason="STOP",stream=True)
                 else:
-                    yield openAI_from_text(model=chat_request.model,content="空响应次数达到上限\n请修改输入提示词",finish_reason="stop",stream=True)
+                    yield openAI_from_text(model=chat_request.model,content="Ciallo～(∠・ω< )",finish_reason="stop",stream=True)
                 
                 return
     
